@@ -41,6 +41,8 @@ html {
 }
 
 /*---------------- global styles -----------------*/
+/* I'm using gruvbox colors from https://github.com/morhetz/gruvbox which is MIT licensed */
+
 body {
     font-family: "Libre Baskerville", serif;
     font-optical-sizing: auto;
@@ -55,9 +57,54 @@ header.primary{
     background-color:#3c3836;
     text-align:center;
     text-shadow:2px 2px #000;
+    /*
+    padding-top:40px;
+    padding-right:40px;
+    padding-bottom:40px;
+    padding-left:40px;
+    */
+    /* Does the same thing as 4 lines above^ */
+    padding:40px;
 }
 
 header.primary a {
     color:#cc241d;
     text-decoration:none;
+}
+
+header.primary h1 {
+    font-size:4rem;
+    text-shadow:-5px -5px #000;
+    margin:0;
+    letter-spacing:0.1rem;
+}
+
+header.primary p.subtitle {
+    font-size:1.5rem;
+    margin:10px 0 0 0;
+    letter-spacing:0.1rem;
+}
+
+header.primary nav ul {
+    padding:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+header.primary nav li {
+    list-style-type:none;
+    padding:0 0 0.1rem 0;
+}
+
+header.primary nav li a {
+    background-color:rgb(0,0,0,0.2);
+    padding:5px 10px;
+    border:1px solid #fb493f;
+    border-radius:60px;
+    transition:0.3s;
+}
+
+header.primary nav li a:hover {
+    background-color:rgb(0,0,0,0.8);
 }
