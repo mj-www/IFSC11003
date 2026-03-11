@@ -9,6 +9,11 @@ html {
 }
 
 /* --------------Utility Classes ---------------- */
+.container {
+    max-width:960px;
+    width:80vw;
+    margin:3rem auto;
+}
 
 /* Skip link utility: hidden until focused */
 .visually-hidden {
@@ -57,13 +62,6 @@ header.primary{
     background-color:#3c3836;
     text-align:center;
     text-shadow:2px 2px #000;
-    /*
-    padding-top:40px;
-    padding-right:40px;
-    padding-bottom:40px;
-    padding-left:40px;
-    */
-    /* Does the same thing as 4 lines above^ */
     padding:40px;
 }
 
@@ -107,4 +105,37 @@ header.primary nav li a {
 
 header.primary nav li a:hover {
     background-color:rgb(0,0,0,0.8);
+}
+
+#content h2 {
+    color:#689d6a;
+    border-bottom:1px groove #689d6a;
+}
+
+#content p {
+    line-height:2rem;
+}
+
+#blog {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    gap:20px;
+}
+
+figure {
+    margin:0;
+}
+
+/* Media Queries */
+/* not necessary to know for the class */
+@media screen and (max-width:600px) {
+    header.primary nav ul {
+	flex-direction:column;
+	gap:2rem;
+    }
+
+    header.primary a {
+	display:block;
+    }
 }
