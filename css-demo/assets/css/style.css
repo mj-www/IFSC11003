@@ -88,11 +88,13 @@ header.primary nav ul {
     display:flex;
     flex-direction:row;
     justify-content:space-around;
+    gap:30px;
 }
 
-header.primary nav li {
+header.primary nav ul li {
     list-style-type:none;
     padding:0 0 0.1rem 0;
+    flex:1;
 }
 
 header.primary nav li a {
@@ -121,15 +123,74 @@ header.primary nav li a:hover {
     flex-direction:row;
     justify-content:space-between;
     gap:20px;
+    flex-wrap:wrap;
 }
 
 figure {
     margin:0;
 }
 
+#blog article.post {
+    box-shadow:0 4px 8px rgba(214,93,14,.66);
+    padding:10px;
+    font-size: 1rem;
+    flex:1;
+}
+
+h2#recent-posts {
+    flex:0 0 100%;
+    /* I cannot for the life of me figure out why
+     * the first two article elements are on one line
+     * while the 3rd is on its own.
+     */
+}
+
+article.post time, article.post figcaption {
+    text-transform:uppercase;
+    font-size: .8rem;
+}
+
+article.post a, aside .container a {
+    color:#458588;
+}
+
+article.post a:visited, aside .container a:visited {
+    color:#b16286;
+}
+
+aside[aria-label="Sidebar"] {
+    background-color:#fbf1c7;
+    color:#1d2021;
+}
+
+aside .container {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    gap:30px;
+}
+
+aside footer {
+    display:none;
+}
+
+aside .container p a:last-child, aside .container p a:visited:last-child {
+    color:#1d2021;
+    display:block;
+    text-align:right;
+    margin-top:20px;
+}
+
+footer.primary {
+    background-color:#689d6a;
+    padding:10px;
+    text-align:center;
+    color:##fbf1c7;
+    text-shadow:2px 2px #1d2021;
+}
+
 /* Media Queries */
-/* not necessary to know for the class */
-@media screen and (max-width:600px) {
+/* not necessary to know for the class */ @media screen and (max-width:600px) {
     header.primary nav ul {
 	flex-direction:column;
 	gap:2rem;
