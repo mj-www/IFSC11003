@@ -45,9 +45,27 @@ html {
   border-radius: 6px;
 }
 
+.img-right {
+    float:right;
+    margin:10px 0px 10px 20px;
+    max-width:25%;
+}
+
+.img-left {
+    float:left;
+    margin:10px 20px 10px 0px;
+    max-width:25%;
+}
+
+.img-center {
+    display:block;
+    margin: 10px auto;
+}
+
 /*---------------- global styles -----------------*/
 /* I'm using gruvbox colors from https://github.com/morhetz/gruvbox which is MIT licensed */
 
+/* Header/main stuff */
 body {
     font-family: "Libre Baskerville", serif;
     font-optical-sizing: auto;
@@ -124,6 +142,9 @@ header.primary nav li a:hover {
     justify-content:space-between;
     gap:20px;
     flex-wrap:wrap;
+    border-top:5px dotted #d65d0e;
+    padding-bottom:30px;
+    border-bottom:5px dotted #d65d0e;
 }
 
 figure {
@@ -139,6 +160,7 @@ figure {
 
 h2#recent-posts {
     flex:0 0 100%;
+    color:#d65d0e;
     /* I cannot for the life of me figure out why
      * the first two article elements are on one line
      * while the 3rd is on its own.
@@ -150,7 +172,7 @@ article.post time, article.post figcaption {
     font-size: .8rem;
 }
 
-article.post a, aside .container a {
+article.post a, aside .container a, #practice a {
     color:#458588;
 }
 
@@ -158,6 +180,109 @@ article.post a:visited, aside .container a:visited {
     color:#b16286;
 }
 
+/* Practice stuff */
+#practice h2 {
+    color:#d79921;
+    border-bottom:1px groove #d79921;
+}
+
+#practice h3 {
+    border-left:10px solid #d79921;
+    padding: 5px 0 5px 5px;
+    text-decoration:underline;
+    text-decoration-color:#d79921;
+}
+
+#practice a:hover {
+    text-decoration:none;
+}
+
+table {
+    width:100%;
+    border:1px solid #d79921;
+    border-collapse:collapse;
+}
+
+caption {
+    font-weight:bold;
+    font-size:1.5rem;
+    margin:10px;
+    color:#d79921;
+}
+
+tr:nth-child(even) {
+    background-color:#504945;
+}
+
+tr:hover {
+    background-color:rgba(215,153,33,0.15);
+}
+
+th {
+    font-weight:bold;
+    padding:5px;
+}
+
+td {
+    border:1px solid #d79921;
+}
+
+td:nth-child(n+2) {
+    text-align:right;
+}
+
+#practice h4 {
+    /* text-decoration:underline; */
+    /* text-decoration-color:#d79921;  */
+    border-bottom:3px dotted #d79921;
+}
+
+#practice ol {
+    list-style-type:upper-roman;
+    list-style-position:inside;
+    border-left:3px dotted #d79921;
+}
+
+#practice ul {
+    list-style-type:square;
+    list-style-position:inside;
+    border-left:2px dotted #d79921;
+}
+
+#practice ul li ul {
+    list-style-type:square;
+}
+
+#practice li::marker {
+    color:#d79921;
+}
+
+#practice dl {
+    border: 1px solid #d79921;
+}
+
+#practice dt {
+    font-weight:bold;
+    text-decoration:underline;
+    color:#d79921;
+}
+
+#practice dd {
+    margin:0;
+    padding:5px 0 15px 0;
+}
+
+#practice blockquote {
+    font-size:1.25rem;
+}
+
+#practice cite {
+    display:block;
+    text-align:right;
+    color:#d79921;
+}
+
+/* Aside stuff */
 aside[aria-label="Sidebar"] {
     background-color:#fbf1c7;
     color:#1d2021;
